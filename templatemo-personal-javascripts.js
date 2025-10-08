@@ -102,35 +102,39 @@ https://templatemo.com/tm-593-personal-shape
         });
 
         // Enhanced form submission with better UX
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+        document.querySelector('.contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const submitBtn = document.querySelector('.submit-btn');
+            const form = e.target;
+            const submitBtn = form.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
-            
-            // Add loading state
+        
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            submitBtn.style.background = 'linear-gradient(135deg, #94a3b8, #64748b)';
-            
-            // Simulate form submission with better feedback
+        
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+        
+                if (response.ok) {
+                    submitBtn.textContent = 'Message Sent! ✓';
+                    form.reset();
+                } else {
+                    submitBtn.textContent = 'Error ❌';
+                }
+            } catch (error) {
+                submitBtn.textContent = 'Network Error ❌';
+            }
+        
             setTimeout(() => {
-                submitBtn.textContent = 'Message Sent! ✓';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                
-                // Show success animation
-                submitBtn.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    submitBtn.style.transform = 'scale(1)';
-                }, 200);
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    document.querySelector('.contact-form').reset();
-                }, 3000);
-            }, 2000);
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 3000);
         });
+        
+
 
         // Enhanced parallax effect for hero background
         let ticking = false;
