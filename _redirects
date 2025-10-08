@@ -1,8 +1,1 @@
-# Keep your affiliate redirect (this stays first)
-/affiliate/*    https://visionary-bienenstitch-002181.netlify.app/:splat    200
-
-# Allow Formspree requests to go through (important!)
-/formspree/*    https://formspree.io/:splat    200
-
-# Your SPA fallback (keep this last)
-/*    /index.html    200
+/affiliate/*   https://visionary-bienenstitch-002181.netlify.app/:splat   200
