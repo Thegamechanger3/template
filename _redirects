@@ -1,1 +1,10 @@
+# Keep your affiliate redirect (this stays first)
+# Example: redirect all /affiliate/* paths to your main Netlify site
 /affiliate/*   https://visionary-bienenstitch-002181.netlify.app/:splat   200
+
+# Allow Formspree requests to go through (important!)
+/formspree/*   https://formspree.io/:splat   200
+https://formspree.io/*   https://formspree.io/:splat   200
+
+# Your SPA fallback (keep this last)
+/*   /index.html   200
