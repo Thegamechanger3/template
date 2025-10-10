@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
 
         * {
             margin: 0;
@@ -629,6 +631,86 @@
             border-radius: 2px;
         }
 
+/* Press Section */
+.press {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, #fafafa 100%);
+    padding: 50px 0;
+     margin-top: -30px; /* overlap slightly */  
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  
+  }
+  
+  .press-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 50px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  /* The scrolling container */
+  .press-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  
+  /* The moving track */
+  .press-slide-track {
+    display: flex;
+    width: calc(200px * 9); /* smaller width so the loop is tighter */
+    animation: scroll 25s linear infinite;
+  }
+   
+  .press-logo {
+    height: 45px;
+    width: 200px;
+    object-fit: contain;
+    margin-right: 40px; /* reduced from 80px to tighten spacing */
+    filter: grayscale(100%) brightness(0.8);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .press-logo:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  /* The magic: continuous loop */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-240px * 3)); } /* width(200) + margin(40) = 240 */
+  }
+  
+  /* Optional responsive tweak */
+  @media (max-width: 768px) {
+    .press-slide-track {
+      animation-duration: 20s;
+    }
+  
+    .press-logo {
+      width: 160px;         /* smaller width so more fit on screen */
+      margin-right: 20px;   /* tighter spacing between each logo */
+    }
+  
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-180px * 3)); } /* width(160) + margin(20) */
+    }
+  }
+  
+  
+  
         /* About Section */
         .about {
             background: var(--bg-secondary);
