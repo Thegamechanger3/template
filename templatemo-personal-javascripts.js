@@ -137,41 +137,30 @@ https://templatemo.com/tm-593-personal-shape
 
 
        // Subtle parallax for hero background image
-let ticking = false;
+       let ticking = false;
 
-function updateParallax() {
-  const scrolled = window.pageYOffset || 0;
-  const heroBg = document.querySelector('.hero-bg img');
-  if (heroBg) {
-    const rate = scrolled * -0.15; // adjust intensity if you like (-0.1 = gentler)
-    heroBg.style.transform = `translateY(${rate}px) scale(1.05)`;
-  }
-  ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(updateParallax);
-    ticking = true;
-  }
-});
-
-        // Add subtle hover effects to skill tags
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', () => {
-                tag.style.transform = 'translateY(-2px) scale(1.05)';
-            });
-            
-            tag.addEventListener('mouseleave', () => {
-                tag.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Keyboard navigation for accessibility
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
+       function updateParallax() {
+         const heroImg = document.querySelector('.hero-bg img');
+         if (!heroImg) return;
+       
+         const scrolled = window.pageYOffset;
+       
+         if (window.innerWidth > 768) {
+           // smooth subtle parallax for desktop
+           const rate = scrolled * -0.3;
+           heroImg.style.transform = `translateY(${rate}px) scale(1.05)`;
+         } else {
+           // disable on mobile for smoothness
+           heroImg.style.transform = 'translateY(0) scale(1.05)';
+         }
+       
+         ticking = false;
+       }
+       
+       window.addEventListener('scroll', () => {
+         if (!ticking) {
+           requestAnimationFrame(updateParallax);
+           ticking = true;
+         }
+       });
+       
