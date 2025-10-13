@@ -136,23 +136,25 @@ https://templatemo.com/tm-593-personal-shape
         
 
 
-        // Enhanced parallax effect for hero background
-        let ticking = false;
-        
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            const rate = scrolled * -0.3;
-            hero.style.transform = `translateY(${rate}px)`;
-            ticking = false;
-        }
+       // Subtle parallax for hero background image
+let ticking = false;
 
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        });
+function updateParallax() {
+  const scrolled = window.pageYOffset || 0;
+  const heroBg = document.querySelector('.hero-bg img');
+  if (heroBg) {
+    const rate = scrolled * -0.15; // adjust intensity if you like (-0.1 = gentler)
+    heroBg.style.transform = `translateY(${rate}px) scale(1.05)`;
+  }
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
+});
 
         // Add subtle hover effects to skill tags
         document.querySelectorAll('.skill-tag').forEach(tag => {
