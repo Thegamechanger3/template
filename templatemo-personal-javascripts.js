@@ -164,3 +164,85 @@ https://templatemo.com/tm-593-personal-shape
          }
        });
        
+
+       // Our Work //
+
+ // Our Work //
+
+ document.querySelectorAll('.portfolio-item').forEach(item => {
+  const slides = item.querySelectorAll('.portfolio-slide');
+  const next = item.querySelector('.next-slide');
+  const prev = item.querySelector('.prev-slide');
+  let index = 0;
+
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    index = (n + slides.length) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  if (next) next.addEventListener('click', () => showSlide(index + 1));
+  if (prev) prev.addEventListener('click', () => showSlide(index - 1));
+
+  /* Swipe gesture for mobile */
+  let startX = 0;
+  item.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  item.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) showSlide(index - 1); // swipe right
+    else if (startX - endX > 50) showSlide(index + 1); // swipe left
+  });
+});
+
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-image');
+const closeBtn = document.querySelector('.lightbox-close');
+const nextBtn = document.querySelector('.lightbox-next');
+const prevBtn = document.querySelector('.lightbox-prev');
+
+let currentImages = [];
+let currentIndex = 0;
+
+// open lightbox when any image slider is clicked
+document.querySelectorAll('.portfolio-slider').forEach(slider => {
+  slider.addEventListener('click', () => {
+    currentImages = slider.dataset.images.split(',');
+    currentIndex = 0;
+    openLightbox(currentImages[currentIndex]);
+  });
+});
+
+function openLightbox(src) {
+  lightbox.classList.add('active');
+  lightboxImg.src = src;
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+}
+
+function showImage(index) {
+  if (!currentImages.length) return;
+  currentIndex = (index + currentImages.length) % currentImages.length;
+  lightboxImg.src = currentImages[currentIndex];
+}
+
+nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
+prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
+closeBtn.addEventListener('click', closeLightbox);
+
+// Close when clicking outside the image
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Swipe for mobile
+let startX = 0;
+lightbox.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+lightbox.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (endX - startX > 50) showImage(currentIndex - 1); // swipe right
+  else if (startX - endX > 50) showImage(currentIndex + 1); // swipe left
+});
+
