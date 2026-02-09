@@ -727,13 +727,17 @@ body.is-leaving {
 /* Blue curved background */
 .pricing-bg {
   background: linear-gradient(300deg, #0f172a 0%, #1e293b 100%);
-  padding: 15rem 1rem 8rem;
   text-align: center;
 
-  /* tighter, more “pinched” curve */
-  border-bottom-left-radius: 50% 120px;
-  border-bottom-right-radius: 50% 120px;
+  /* offset for fixed nav + spacing */
+  padding-top: calc(clamp(6rem, 18vw, 15rem) + 4.5rem);
+  padding-inline: 1rem;
+  padding-bottom: clamp(4rem, 10vw, 8rem);
+
+  border-bottom-left-radius: 50% clamp(60px, 12vw, 120px);
+  border-bottom-right-radius: 50% clamp(60px, 12vw, 120px);
 }
+
 
 
 /* Title styling */
