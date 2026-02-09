@@ -10,12 +10,13 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        html, body {
-            min-height: 100%;
-            overflow-x: hidden;
-            overscroll-behavior: none;
-            background: #0f172a;
+          body {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+          }
+          
+          body.is-leaving {
+            opacity: 0;
           }
           
  /* Footer (Plain CSS) */
@@ -1182,6 +1183,7 @@
   /* =============================================
    Services We Excel At Section – Luxentis 2025
    ============================================= */
+   
 .services {
   position: relative;
   overflow: hidden;

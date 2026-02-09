@@ -746,586 +746,249 @@ body.is-leaving {
   z-index: 2;
 }
 /*-- -------------------------- -->
-<---          Pricing           -->
+<---          Contact           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #pricing-1790 {
-    padding: var(--sectionPadding);
-    padding-bottom: 10vw;
-    background-color: #F7F7F7;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-  }
-  #pricing-1790 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  #pricing-1790 .cs-content {
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    padding-top: 100px;
-  }
-  #pricing-1790 .cs-flex {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #pricing-1790 .cs-topper {
-    color: #46b8ff;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-  }
-
-  #pricing-1790 .cs-title {
-    margin: 0;
-    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-    font-weight: 900;
-    text-transform: uppercase;       
-    letter-spacing: 0.01em;        
-    line-height: 1.15;
-    width: 70%;
-  }
-  #pricing-1790 .cs-wrapper {
-    width: 100%;
-    max-width: 80rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #pricing-1790 .cs-ul {
-    width: 100%;
-    margin: 1.5rem 0 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  #pricing-1790 .cs-li {
-    font-size: var(--bodyFontSize);
-    list-style: none;
-    line-height: 1.5em;
-    width: 100%;
-    max-width: 21.8125rem;
-    color: var(--bodyTextColor);
-    display: flex;
-    justify-content: flex-start;
-    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  #pricing-1790 .cs-icon {
-    width: 1.125rem;
-    height: auto;
-    display: block;
-  }
-  #pricing-1790 .cs-card-group {
-    width: 100%;
-    max-width: 72rem; /* was 57rem */
-    margin: 3rem 0 0 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    #contact-1388 {
+        padding: var(--sectionPadding);
+        background-color: #ffffff;
+        position: relative;
+        z-index: 1;
+        padding-top: 5rem;
+    }
+    #contact-1388 .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 36.5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        column-gap: auto;
+        /* 48px - 64px */
+        gap: clamp(2rem, 3vw, 3rem);
+        position: relative;
+    }
+    #contact-1388 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
   
-  #pricing-1790 .cs-item {
-    width: 100%;
-    max-width: 26rem;        /* wider */
-    list-style: none;
-
-    background: #f6f6f6;
-    border-radius: 1.75rem;
-    padding: 2.25rem 2.25rem 2rem; /* tighter vertical padding */
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    #contact-1388 .cs-title {
+        max-width: 23ch;
+    }
+    #contact-1388 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #contact-1388 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #contact-1388 .cs-ul {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        position: relative;
+    }
+    #contact-1388 .cs-li {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    #contact-1388 .cs-li:hover .cs-icon-wrapper {
+        transform: scale(1.1);
+    }
+    #contact-1388 .cs-header {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2em;
+        margin-bottom: 0.75rem;
+        color: var(--headerColor);
+        display: block;
+    }
+    #contact-1388 .cs-link {
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-decoration: none;
+        color: #767676;
+        display: block;
+        position: relative;
+    }
+    #contact-1388 .cs-link:hover {
+        text-decoration: underline;
+    }
+    #contact-1388 .cs-icon-wrapper {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid #bababa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        transition: transform 0.3s;
+    }
+    #contact-1388 .cs-icon {
+        width: 1.5rem;
+        height: auto;
+        display: block;
+    }
+    #contact-1388 .cs-form {
+        width: 100%;
+        max-width: 39.375rem;
+        /* 24px - 48px top and bottom */
+        /* 16px - 48px left and right */
+        padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+        /* prevents flexbox from affecting height and width */
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    #contact-1388 .cs-h3 {
+        /* 20px - 39px */
+        font-size: clamp(1.25rem, 3vw, 2.4375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: var(--headerColor);
+    }
+    #contact-1388 .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        font-weight: 700;
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    #contact-1388 .cs-input {
+        font-size: 1rem;
+        width: 100%;
+        height: 3.5rem;
+        padding: 0;
+        padding-left: 1.5rem;
+        color: var(--headerColor);
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+    }
+    #contact-1388 .cs-input::placeholder {
+        color: #7d799c;
+        opacity: 0.6;
+    }
+    #contact-1388 .cs-textarea {
+        min-height: 7.5rem;
+        padding-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-family: inherit;
+    }
+    #contact-1388 .cs-button-solid {
+        font-size: 1rem;
+        line-height: 3.5rem;
+        text-decoration: none;
+        font-weight: 700;
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0 3rem;
+        border-radius: 1.875rem;
+        background-color: #46b8ff;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+    }
+    #contact-1388 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: #752929;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    #contact-1388 .cs-button-solid:hover {
+        color: var(--primary);
+    }
+    #contact-1388 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #contact-1388 .cs-submit {
+        width: 100%;
+        min-width: 12.5rem;
+        border: none;
+    }
+    #contact-1388 .cs-submit:hover {
+        color: #fff;
+        cursor: pointer;
+    }
   }
-  
-  #pricing-1790 .cs-item.cs-popular {
-    background-color: #1A1A1A;
-    /* 48px - 64px top & bottom */
-    /* 16px - 32px left & right */
-    padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 1.5vw, 2rem);
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #contact-1388 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #contact-1388 .cs-content {
+        width: 47%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+    #contact-1388 .cs-submit {
+        width: auto;
+    }
   }
-  #pricing-1790 .cs-item.cs-popular .cs-package,
-  #pricing-1790 .cs-item.cs-popular .cs-frequency,
-  #pricing-1790 .cs-item.cs-popular .cs-item-text {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.9;
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #contact-1388 .cs-form {
+        width: 46%;
+        max-width: 36.125rem;
+    }
+    #contact-1388 .cs-submit {
+        width: auto;
+    }
   }
-  #pricing-1790 .cs-item.cs-popular .cs-price {
-    color: var(--bodyTextColorWhite);
-  }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid {
-    transition: color 0.3s;
-  }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid:hover {
-    color: var(--primary);
-  }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid:before {
-    background-color: #fff;
-  }
-  #pricing-1790 .cs-package {
-    /* 13px - 16px */
-    font-size: clamp(0.8125rem, 1.4vw, 1rem);
-    font-weight: 700;
-    line-height: 1.2em;
-    text-align: inherit;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #pricing-1790 .cs-flex-wrapper {
-    width: 100%;
-    margin: 0 0 1.5rem 0;
-    padding: 0 0 1.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 0.5rem;
-    position: relative;
-    z-index: 1;
-  }
-  #pricing-1790 .cs-flex-wrapper:after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(232, 232, 232, 0.2) 0%, #e8e8e8 53.78%, rgba(232, 232, 232, 0.2) 100%);
-    opacity: 1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-  }
-  #pricing-1790 .cs-price {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    margin: 0;
-    color: var(--headerColor);
-  }
-  #pricing-1790 .cs-frequency {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-align: inherit;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #pricing-1790 .cs-item-text {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-align: inherit;
-    margin: 0 0 auto;
-    color: var(--bodyTextColor);
-  }
-  #pricing-1790 .cs-button-solid {
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: clamp(3.2em, 6vw, 3.8em); /* taller */
-    text-align: center;
-    text-decoration: none;
-    min-width: 14rem;        /* wider */
-    margin: 2rem 0 0 0;
-    box-sizing: border-box;
-    padding: 0 2.5rem;      /* more left/right space */
-    color: #ffffff;
-    background-color: #46b8ff;
-    border-radius: 999px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  /* Hover overlay */
-  #pricing-1790 .cs-button-solid::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 0%;
-    background: linear-gradient(180deg, #062a44 0%, #041f34 100%);
-    border-radius: 999px;
-    z-index: -1;
-    transition: width 0.45s cubic-bezier(.4, 0, .2, 1);
-  }
-  
-  /* On hover */
-  #pricing-1790 .cs-button-solid:hover::before {
-    width: 100%;
-  }  
-  
-  #pricing-1790 .cs-graphic {
-    width: 100%;
-    min-width: 120rem;
-    height: auto;
-    position: absolute;
-    bottom: -1rem;
-    left: 0rem;
-    z-index: -1;
-  }
-  #pricing-1790 .cs-dark {
-    display: none;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #pricing-1790 .cs-container {
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #pricing-1790 .cs-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  #pricing-1790 .cs-ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: stretch;
-  }
-  #pricing-1790 .cs-card-group {
-    flex-direction: row;
-    align-items: stretch;
-  }
-  #pricing-1790 .cs-item {
-    height: auto;
-    margin: 1.5rem 0;
-  }
-  #pricing-1790 .cs-item.cs-popular {
-    margin: 0;
-  }
-}
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #pricing-1790 .cs-ul {
-    width: 30%;
-    display: flex;
-  }
-  #pricing-1790 .cs-wrapper {
-    flex-direction: row;
-    gap: 1.25rem;
-  }
-  #pricing-1790 .cs-card-group {
-    margin: 0;
-  }
-  #pricing-1790 .cs-item {
-    min-height: 25rem;
-  }
-}
-
-@media only screen and (min-width: 48rem) {
-  #pricing-1790 .cs-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* centers the card group */
+  /* Large Desktop - 1500px */
+  @media only screen and (min-width: 93.75rem) {
+    #contact-1388 .cs-graphic {
+        display: block;
+    }
   }
 
-  #pricing-1790 .cs-card-group {
-    width: 100%;
-    justify-content: center; /* centers items within the row */
-    gap: 1.5rem;
-  }
 
-  #pricing-1790 .cs-item {
-    width: auto;                /* stop being 100% in row layout */
-    flex: 0 1 18rem;            /* card width */
-    margin: 0;                  /* remove the 1.5rem 0 margin */
-  }
-}
 
-@media only screen and (min-width: 64rem) {
-  #pricing-1790 .cs-item {
-    flex-basis: 20rem;          /* slightly wider cards on desktop */
-  }
-}
-/* Card group layout (centered) */
-#pricing-1790 .cs-card-group {
-  width: 100%;
-  margin: 3rem 0 0;
-  padding: 0;
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Row layout on larger screens */
-@media (min-width: 48rem) {
-  #pricing-1790 .cs-card-group {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
-  }
-}
-
-/* The card */
-#pricing-1790 .cs-item {
-  width: 100%;
-  max-width: 22rem;
-  list-style: none;
-
-  background: #f6f6f6;
-  border-radius: 2rem;
-  padding: 3.25rem 2.5rem 2.5rem;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* Big title */
-#pricing-1790 .cs-plan-title {
-  margin: 0 0 1.5rem 0;
-  font-size: clamp(1.125rem, 2vw, 1.65rem);
-
-  line-height: 1;
-  letter-spacing: 0.02em;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #0f172a;
-}
-
-/* Features list */
-#pricing-1790 .cs-features {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-/* Each feature row: text left, icon right */
-#pricing-1790 .cs-feature {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-
-  font-size: 1rem;
-  line-height: 1.35;
-  color: #2b2f3a;
-}
-
-/* Icon styles */
-#pricing-1790 .cs-status {
-  flex: none;
-  width: 2rem;
-  text-align: right;
-  font-size: 1.4rem;
-  font-weight: 800;
-}
-
-/* Blue check */
-#pricing-1790 .cs-status--yes {
-  color: #3b82f6;
-}
-
-/* Grey "no" */
-#pricing-1790 .cs-status--no {
-  color: #8b8b8b;
-}
-
-/* Disabled features */
-#pricing-1790 .cs-feature--off {
-  color: #9aa0aa;
-}
-
-/* Price row near bottom */
-#pricing-1790 .cs-price-row {
-  margin-top: auto;              /* pushes price + button to bottom */
-  padding-top: 2.75rem;
-
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-#pricing-1790 .cs-price-big {
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-  font-weight: 900;
-  line-height: 1;
-  color: #0b0b0b;
-}
-
-#pricing-1790 .cs-price-sub {
-  font-size: 1.25rem;
-  color: #404559;
-  font-weight: 600;
-}
-
-#pricing-1790 .cs-cta {
-  margin-top: 1.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  min-width: 70px;        /* 👈 controls width instead of padding */
-  border-radius: 999px;
-  padding: 0 0.75rem;     /* only small inner spacing now */
-  background: #0b2340;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-#pricing-1790 .cs-cta:hover {
-  filter: brightness(1.05);
-}
-/* ===== Pricing cards: wide + shorter ===== */
-
-/* Card group */
-#pricing-1790 .cs-card-group{
-  width: 100%;
-  max-width: 80rem;          /* make the whole group wider */
-  margin: 3rem auto 0;       /* center it */
-  padding: 0;
-  list-style: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Row layout on tablet+ */
-@media (min-width: 48rem){
-  #pricing-1790 .cs-card-group{
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
-  }
-}
-
-/* Cards */
-#pricing-1790 .cs-item{
-  width: 100%;
-  max-width: 28rem;          /* wider cards */
-  padding: 2.25rem 2.25rem 2rem; /* less vertical padding = less height */
-  margin: 0;                 /* remove vertical margins that add height */
-  border-radius: 2rem;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* Make 3 cards fit nicely on desktop */
-@media (min-width: 64rem){
-  #pricing-1790 .cs-item{
-    flex: 1 1 0;             /* let them grow evenly */
-    max-width: 26rem;        /* keep a nice max */
-  }
-}
-
-/* If popular card is too tall, align its padding too */
-#pricing-1790 .cs-item.cs-popular{
-  padding: 2.5rem 2.25rem 2.25rem; /* reduce the clamp padding */
-}
-/* ============================= */
-/* POP + STAND OUT PRICING CARDS */
-/* ============================= */
-
-#pricing-1790 .cs-card-group {
-  perspective: 1000px;
-}
-
-/* Base card look: more depth + separation */
-#pricing-1790 .cs-item {
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08),
-    0 1px 0 rgba(255,255,255,0.6) inset;
-  transition:
-    transform 0.35s cubic-bezier(.2,.8,.2,1),
-    box-shadow 0.35s cubic-bezier(.2,.8,.2,1),
-    border-color 0.35s ease,
-    filter 0.35s ease;
-  will-change: transform;
-  position: relative;
-  overflow: hidden;
-}
-
-/* POP-IN initial state */
-#pricing-1790 .cs-item {
-  opacity: 0;
-  transform: translateY(40px) scale(0.92);
-  filter: blur(6px);
-}
-
-/* When visible: come out */
-#pricing-1790 .cs-item.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
-/* Hover/tap: more lift + stronger shadow */
-#pricing-1790 .cs-item:hover,
-#pricing-1790 .cs-item.is-active {
-  transform: translateY(-14px) scale(1.02);
-  border-color: rgba(59,130,246,0.35);
-  box-shadow:
-    0 30px 80px rgba(0,0,0,0.16),
-    0 8px 25px rgba(11,35,64,0.10);
-}
-
-#pricing-1790 .cs-item:hover::before,
-#pricing-1790 .cs-item.is-active::before {
-  opacity: 1;
-}
-
-/* CTA also “pops” a bit */
-#pricing-1790 .cs-cta {
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-#pricing-1790 .cs-item:hover .cs-cta,
-#pricing-1790 .cs-item.is-active .cs-cta {
-  transform: translateY(-3px);
-  filter: brightness(1.06);
-}
-
-/* Optional: make the middle plan stand out by default */
-#pricing-1790 .cs-item.is-featured {
-  transform: translateY(-10px) scale(1.03);
-  border-color: rgba(11,35,64,0.25);
-  box-shadow:
-    0 35px 90px rgba(0,0,0,0.18),
-    0 10px 30px rgba(11,35,64,0.12);
-}
 
 /* CTA Section */
 #cta-697 {
@@ -1421,188 +1084,190 @@ body.is-leaving {
     justify-content: space-between;
   }
 }
+
 /* ============================================
    Footer (White Background - Normal CSS)
    ============================================ */
 
 /* Mobile */
 #cs-footer-308 {
-  padding: 60px 20px;              /* was var(--sectionPadding) */
-  background-color: #ffffff;       /* WHITE background */
-}
-
-/* Container */
-#cs-footer-308 .cs-container {
-  width: 100%;
-  max-width: 700px;                /* was 43.75rem */
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;                       /* 2.5rem */
-}
-
-/* Logo group */
-#cs-footer-308 .cs-logo-group {
-  width: 100%;
-  position: relative;
-}
-
-#cs-footer-308 .cs-logo {
-  width: 178px;                    /* matches your img width */
-  height: auto;
-  display: block;
-  margin-bottom: 24px;
-}
-
-#cs-footer-308 .cs-logo-img {
-  width: 100%;
-  height: auto;
-}
-
-/* If you ever use a dark logo variant */
-#cs-footer-308 .cs-logo-img.dark {
-  display: none;
-}
-
-/* Text */
-#cs-footer-308 .cs-text {
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-  line-height: 1.5;
-  margin: 0;
-  width: 78%;
-  max-width: 420px;
-  color: #1a1a1a;                  /* dark text for white bg */
-}
-
-/* Nav columns */
-#cs-footer-308 .cs-nav {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 12px;                       /* 0.75rem */
-}
-
-#cs-footer-308 .cs-nav-li {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-/* Column header */
-#cs-footer-308 .cs-header {
-  font-size: 1rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #1a1a1a;
-  display: block;
-}
-
-/* Links */
-#cs-footer-308 .cs-nav-link {
-  font-size: 1rem;
-  text-decoration: none;
-  line-height: 1.5;
-  color: #1a1a1a;
-  position: relative;
-  display: inline-block;
-  transition: color 0.3s ease;
-}
-
-/* underline animation */
-#cs-footer-308 .cs-nav-link::before {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: currentColor;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-#cs-footer-308 .cs-nav-link:hover {
-  color: #1a73e8;                  /* "primary" hover color */
-}
-
-#cs-footer-308 .cs-nav-link:hover::before {
-  width: 100%;
-}
-
-/* Contact icons */
-#cs-footer-308 .cs-icon {
-  width: 24px;
-  height: auto;
-  margin-right: 12px;
-  /* make black icons visible on white background */
-  filter: invert(1);
-  opacity: 0.75;
-}
-
-/* Bottom bar */
-#cs-footer-308 .cs-bottom {
-  max-width: 1280px;
-  margin: 32px auto 0;
-  padding-top: 24px;
-  border-top: 1px solid #e6e6e6;   /* light divider for white bg */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#cs-footer-308 .cs-copyright,
-#cs-footer-308 .cs-copyright-link {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #1a1a1a;
-}
-
-#cs-footer-308 .cs-copyright-link {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-#cs-footer-308 .cs-copyright-link:hover {
-  color: #1a73e8;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
+    padding: 60px 20px;              /* was var(--sectionPadding) */
+    background-color: #ffffff;       /* WHITE background */
+  }
+  
+  /* Container */
   #cs-footer-308 .cs-container {
-    flex-direction: row;
-    justify-content: space-between;
-    row-gap: 40px;
+    width: 100%;
+    max-width: 700px;                /* was 43.75rem */
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;                       /* 2.5rem */
   }
-
-  #cs-footer-308 .cs-nav {
-    width: auto;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  #cs-footer-308 .cs-container {
-    max-width: 1280px;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    column-gap: 84px;              /* 5.25rem */
-  }
-
+  
+  /* Logo group */
   #cs-footer-308 .cs-logo-group {
-    width: 30%;
-    max-width: 387px;              /* 24.1875rem */
-    margin-right: auto;
+    width: 100%;
+    position: relative;
   }
-
+  
+  #cs-footer-308 .cs-logo {
+    width: 178px;                    /* matches your img width */
+    height: auto;
+    display: block;
+    margin-bottom: 24px;
+  }
+  
+  #cs-footer-308 .cs-logo-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* If you ever use a dark logo variant */
+  #cs-footer-308 .cs-logo-img.dark {
+    display: none;
+  }
+  
+  /* Text */
   #cs-footer-308 .cs-text {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5;
+    margin: 0;
+    width: 78%;
+    max-width: 420px;
+    color: #1a1a1a;                  /* dark text for white bg */
+  }
+  
+  /* Nav columns */
+  #cs-footer-308 .cs-nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;                       /* 0.75rem */
+  }
+  
+  #cs-footer-308 .cs-nav-li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Column header */
+  #cs-footer-308 .cs-header {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    display: block;
+  }
+  
+  /* Links */
+  #cs-footer-308 .cs-nav-link {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  /* underline animation */
+  #cs-footer-308 .cs-nav-link::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  #cs-footer-308 .cs-nav-link:hover {
+    color: #1a73e8;                  /* "primary" hover color */
+  }
+  
+  #cs-footer-308 .cs-nav-link:hover::before {
     width: 100%;
   }
-}
+  
+  /* Contact icons */
+  #cs-footer-308 .cs-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 12px;
+    /* make black icons visible on white background */
+    filter: invert(1);
+    opacity: 0.75;
+  }
+  
+  /* Bottom bar */
+  #cs-footer-308 .cs-bottom {
+    max-width: 1280px;
+    margin: 32px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid #e6e6e6;   /* light divider for white bg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #cs-footer-308 .cs-copyright,
+  #cs-footer-308 .cs-copyright-link {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+  
+  #cs-footer-308 .cs-copyright-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #cs-footer-308 .cs-copyright-link:hover {
+    color: #1a73e8;
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) {
+    #cs-footer-308 .cs-container {
+      flex-direction: row;
+      justify-content: space-between;
+      row-gap: 40px;
+    }
+  
+    #cs-footer-308 .cs-nav {
+      width: auto;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    #cs-footer-308 .cs-container {
+      max-width: 1280px;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      column-gap: 84px;              /* 5.25rem */
+    }
+  
+    #cs-footer-308 .cs-logo-group {
+      width: 30%;
+      max-width: 387px;              /* 24.1875rem */
+      margin-right: auto;
+    }
+  
+    #cs-footer-308 .cs-text {
+      width: 100%;
+    }
+  }
+  
