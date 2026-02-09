@@ -747,3 +747,8 @@ body.is-leaving {
   background: #0f5ed6;
 }
 
+/* Language Switcher */
+.cs-language .cs-lang-link {
+  color: inherit;          /* uses your text color */
+  text-decoration: none;   /* removes underline */
+}

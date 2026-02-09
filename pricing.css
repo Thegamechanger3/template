@@ -286,6 +286,7 @@ body.is-leaving {
   #cs-navigation .cs-li-link {
     /* 16px - 24px */
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600; 
     line-height: 1.2em;
     text-decoration: none;
     margin: 0;
@@ -626,6 +627,7 @@ body.is-leaving {
   }
   #cs-navigation .cs-li-link {
     font-size: 1rem;
+    font-weight: 600; 
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
