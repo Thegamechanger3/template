@@ -1271,3 +1271,15 @@ body.is-leaving {
     }
   }
   
+
+  /* THANKS MESSAGE */
+
+  .cs-form-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .cs-form-message:empty {
+    display: none;
+  }
+  

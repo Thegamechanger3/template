@@ -165,7 +165,6 @@
         name="contact"
         method="POST"
         data-netlify="true"
-        action="/thanks/"
       >
         <input type="hidden" name="form-name" value="contact" />
       
@@ -188,11 +187,22 @@
       
         <label class="cs-label">
           MESSAGE
-          <textarea class="cs-input cs-textarea" required name="message" placeholder="Write message..."></textarea>
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="message"
+            placeholder="Write message..."
+          ></textarea>
         </label>
       
-        <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        <!-- Status message -->
+        <p class="cs-form-message" id="form-msg" aria-live="polite"></p>
+      
+        <button class="cs-button-solid cs-submit" type="submit">
+          Send Message
+        </button>
       </form>
+      
       
       
     </div>
@@ -372,5 +382,40 @@
       window.location.href = link.href;
     }, 400);
   });
+
+// THANKS MESSAGE //
+
+  const form = document.querySelector('#cs-form-1388');
+  const msg = document.querySelector('#form-msg');
+
+  function encode(data) {
+    return new URLSearchParams(data).toString();
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    msg.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encode(Object.fromEntries(formData)),
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      msg.textContent = 'Thanks! Your message has been sent.';
+      form.reset();
+    } catch (error) {
+      msg.textContent = 'Oops! Something went wrong. Please try again.';
+    }
+  });
+
   </script>
 </html>
