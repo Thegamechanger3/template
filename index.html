@@ -334,44 +334,62 @@
             <p class="fade-in">Ready to bring your vision to life? Let's discuss how we can create something amazing together. I'm always excited to take on new challenges and collaborate on innovative projects.</p>
             
             <!-- Updated form with Formspree endpoint -->
-            <form action="https://formspree.io/f/mdkwlljn" method="POST" class="contact-form fade-in">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your full name" required>
-                </div>
-            
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
-              </div>
-            
-              <!-- ✅ Added phone number field -->
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Your phone number"
-                  pattern="[0-9+\-\s()]{7,}"
-                  required
-                >
-              </div>
-            
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-              </div>
-            
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
-              </div>
-            
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  class="contact-form fade-in"
+  id="contact-form"
+>
+  <!-- Required for Netlify -->
+  <input type="hidden" name="form-name" value="contact" />
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="Your phone number"
+      pattern="[0-9+\-\s()]{7,}"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="Tell us about your project..."
+      required
+    ></textarea>
+  </div>
+
+  <!-- Status message (for AJAX) -->
+  <p class="form-message" id="contact-form-msg" aria-live="polite"></p>
+
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
             
         </div>
     </div>
@@ -478,6 +496,36 @@
 
 
 <script src="templatemo-personal-javascripts.js"></script>
+<script>
+   const form = document.querySelector('#contact-form');
+  const msg = document.querySelector('#contact-form-msg');
+
+  function encode(data) {
+    return new URLSearchParams(data).toString();
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.textContent = 'Sending...';
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(Object.fromEntries(formData)),
+      });
+
+      if (!res.ok) throw new Error('Failed');
+
+      msg.textContent = 'Thanks! Your message has been sent.';
+      form.reset();
+    } catch (err) {
+      msg.textContent = 'Sorry—something went wrong. Please try again.';
+    }
+  });
+</script>
 
 
 </body>
