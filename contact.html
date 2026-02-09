@@ -54,7 +54,7 @@
   <div class="cs-container">
     <!--Nav Logo-->
     <a href="" class="cs-logo" aria-label="back to home">
-      <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+      <img src="/images/test_svg.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
     </a>
 
     <!--Navigation List-->
@@ -159,66 +159,41 @@
                 </li>
             </ul>
         </div>
-        <!--Form-->
         <form
         class="cs-form"
         id="cs-form-1388"
         name="contact"
         method="POST"
         data-netlify="true"
+        action="/thanks/"
       >
-        <!-- Required for Netlify -->
         <input type="hidden" name="form-name" value="contact" />
       
         <h3 class="cs-h3">Make Appointment</h3>
       
         <label class="cs-label">
           NAME
-          <input
-            class="cs-input"
-            required
-            type="text"
-            name="name"
-            placeholder="Name"
-          />
+          <input class="cs-input" required type="text" name="name" placeholder="Name" />
         </label>
       
         <label class="cs-label cs-email">
           EMAIL
-          <input
-            class="cs-input"
-            required
-            type="email"
-            name="email"
-            placeholder="Email"
-          />
+          <input class="cs-input" required type="email" name="email" placeholder="Email" />
         </label>
       
         <label class="cs-label cs-phone">
           PHONE
-          <input
-            class="cs-input"
-            required
-            type="tel"
-            name="phone"
-            placeholder="Phone"
-          />
+          <input class="cs-input" required type="tel" name="phone" placeholder="Phone" />
         </label>
       
         <label class="cs-label">
           MESSAGE
-          <textarea
-            class="cs-input cs-textarea"
-            required
-            name="message"
-            placeholder="Write message..."
-          ></textarea>
+          <textarea class="cs-input cs-textarea" required name="message" placeholder="Write message..."></textarea>
         </label>
       
-        <button class="cs-button-solid cs-submit" type="submit">
-          Send Message
-        </button>
+        <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
       </form>
+      
       
     </div>
 </section>
