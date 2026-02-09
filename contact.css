@@ -931,7 +931,7 @@ body.is-leaving {
         display: block;
         height: 100%;
         width: 0%;
-        background: #752929;
+        background: linear-gradient(180deg, #062a44 0%, #041f34 100%);
         opacity: 1;
         top: 0;
         left: 0;
