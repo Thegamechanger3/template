@@ -738,8 +738,6 @@ body.is-leaving {
   border-bottom-right-radius: 50% clamp(60px, 12vw, 120px);
 }
 
-
-
 /* Title styling */
 .pricing-title {
   color: #fff;
